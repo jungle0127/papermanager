@@ -63,6 +63,11 @@
 		<version>${struts.version}</version>
 	</dependency>
 	<dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-config-browser-plugin</artifactId>
+	    <version>${struts.version}</version>
+	</dependency>		
+	<dependency>
 		<groupId>org.apache.struts</groupId>
 		<artifactId>struts2-junit-plugin</artifactId>
 		<version>${struts.version}</version>
