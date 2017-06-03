@@ -27,7 +27,12 @@
 			<property name="enableSubPackages" value="true"></property>
 		</javaClientGenerator>
 		<!-- related table and classese -->
-		<table schema="ncee" tableName="book" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">			
+		<table schema="ncee" tableName="book" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+					
+		</table>
+		<table schema="ncee" tableName="user_role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		<table schema="ncee" tableName="users" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 		</table>
 	</context>
 </generatorConfiguration>
