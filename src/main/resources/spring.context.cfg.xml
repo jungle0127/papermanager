@@ -16,7 +16,7 @@
 		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd ">
 	
 	<context:annotation-config/>
-	<context:component-scan base-package="com.ncee.beans"/>
+	<context:component-scan base-package="com.ncee.beans,com.ncee.service.impl"/>
 	<context:property-placeholder location="classpath:mysql.properties" />
 	
 	<bean id="mysqlDatasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">

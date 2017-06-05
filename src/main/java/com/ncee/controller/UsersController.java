@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ncee.dao.model.Users;
-import com.ncee.service.UsersService;
+import com.ncee.service.impl.UsersService;
 
 @Controller
 public class UsersController {
