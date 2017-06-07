@@ -11,7 +11,7 @@
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
-		<!-- didn't find a way for struts2-config-browser-plugin working with struts.cfg.xml   -->
+		<!-- didn't find a way for struts2-convention-plugin working with self-defined struts configuration file   -->
 		<!-- 
 		<init-param>
 			<param-name>config</param-name>
