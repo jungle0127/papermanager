@@ -5,7 +5,9 @@
 <struts>
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
-	<constant name="struts.convention.result.path" value="/WEB-INF/"></constant>
+	<!-- 
+	<constant name="struts.convention.result.path" value="/WEB-INF"></constant>
+	 -->
 	<constant name="objectFactory" value="spring"/>
 	<constant name="struts.action.extension" value="do,,action" />
 </struts>
