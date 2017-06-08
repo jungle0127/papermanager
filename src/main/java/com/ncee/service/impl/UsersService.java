@@ -1,7 +1,5 @@
 package com.ncee.service.impl;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +11,11 @@ import com.ncee.service.IUsersService;
 public class UsersService implements IUsersService {
 	@Autowired
 	private UsersMapper userMapper;
-	public List<Users> getAllUsers(){
-		return null;
+	@Override
+	public Users findUser(String loginName, String password) {
+		Users user = new Users();
+		user.setUsername(loginName);
+		user.setPassword(password);
+		return this.userMapper.selectUserByLoginInfomation(user);		
 	}
 }

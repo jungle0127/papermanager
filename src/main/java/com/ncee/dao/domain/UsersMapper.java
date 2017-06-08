@@ -38,7 +38,14 @@ public interface UsersMapper {
     })
     @ResultMap("com.ncee.dao.domain.UsersMapper.BaseResultMap")
     Users selectByPrimaryKey(Long id);
-
+    @Select({
+    	"select",
+    	"id,username,password,roleid,active",
+    	"from users",
+    	"where username=#{username,jdbcType=VARCHAR}  and password=#{password,jdbcType=VARCHAR}"
+    })
+    Users selectUserByLoginInfomation(Users loginUser);
+    
     int updateByPrimaryKeySelective(Users record);
 
     @Update({
