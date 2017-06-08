@@ -2,7 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 	<classPathEntry location="H:\\MavenRepository\\mysql\\mysql-connector-java\\5.1.42\\mysql-connector-java-5.1.42.jar"/>
-	<context id="ncee" targetRuntime="MyBatis3Simple">
+	<context id="ncee" targetRuntime="MyBatis3">
 		<commentGenerator>
 			<property name="suppressDate" value="true"/>
 			<property name="suppressAllComments" value="true"/>
@@ -23,14 +23,14 @@
 			<property name="enableSubPackages" value="true"></property>
 		</sqlMapGenerator>
 		<!--  Location of DAO classes -->
-		<javaClientGenerator targetPackage="com.ncee.dao.domain" targetProject="C:\\Users\\Jerry\\git\\papermanger\\src\\main\\java" type="ANNOTATEDMAPPER">
+		<javaClientGenerator targetPackage="com.ncee.dao.domain" targetProject="C:\\Users\\Jerry\\git\\papermanger\\src\\main\\java" type="MIXEDMAPPER">
 			<property name="enableSubPackages" value="true"></property>
 		</javaClientGenerator>
 		<!-- related table and classese -->
 		<table schema="ncee" tableName="user_role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 			<property name="selectAllOrderByClause" value="id desc"/>
 		</table>
-		<table schema="ncee" tableName="users" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+		<table schema="ncee" tableName="users" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true" selectByExampleQueryId="false">
 			<property name="selectAllOrderByClause" value="id desc"/>
 		</table>
 		<table schema="ncee" tableName="rights" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
@@ -83,8 +83,9 @@
 		</table>
 		<table schema="ncee" tableName="question" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 			<property name="selectAllOrderByClause" value="id desc"/>
-			<columnOverride column="answer" javaType="java.lang.String" jdbcType="VARCHAR">
-			</columnOverride>
+			<!-- 
+			<columnOverride column="answer" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>
+			 -->
 		</table>
 		<table schema="ncee" tableName="question_selection" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 			<property name="selectAllOrderByClause" value="id desc"/>

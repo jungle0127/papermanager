@@ -9,11 +9,7 @@ public class Question {
 
     private Long constructTypeId;
 
-    private String answer;
-
     private Integer active;
-
-    private String analysis;
 
     public Long getQuestionId() {
         return questionId;
@@ -47,27 +43,11 @@ public class Question {
         this.constructTypeId = constructTypeId;
     }
 
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer == null ? null : answer.trim();
-    }
-
     public Integer getActive() {
         return active;
     }
 
     public void setActive(Integer active) {
         this.active = active;
-    }
-
-    public String getAnalysis() {
-        return analysis;
-    }
-
-    public void setAnalysis(String analysis) {
-        this.analysis = analysis == null ? null : analysis.trim();
     }
 }
