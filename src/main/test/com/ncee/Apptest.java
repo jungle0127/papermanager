@@ -1,5 +1,5 @@
 package com.ncee;
 
-public class AppTest {
+public class Apptest {
 
 }
