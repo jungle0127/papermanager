@@ -31,6 +31,7 @@ public class LoginAction extends ActionSupport {
 	public String login() {
 		//Users user = this.userService.findUser(loginName, password);
 		logger.info(this.username + this.password);
+		logger.info("***********************log4j Test******************************");
 		return SUCCESS;
 	}
 
