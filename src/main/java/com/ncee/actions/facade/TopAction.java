@@ -7,7 +7,8 @@ import org.apache.struts2.convention.annotation.Results;
 
 import com.opensymphony.xwork2.ActionSupport;
 @Namespace("/facade")
-@Results({@Result(name="top",location="/WEB-INF/management/facade/top.jsp"),
+@Results({
+	@Result(name="top",location="/WEB-INF/management/facade/top.jsp"),
 	@Result(name="menutree",location="/WEB-INF/management/facade/menutree.jsp"),
 	@Result(name="welcome",location="/WEB-INF/management/facade/welcome.jsp")})
 public class TopAction extends ActionSupport {

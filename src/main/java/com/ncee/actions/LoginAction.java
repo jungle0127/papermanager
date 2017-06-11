@@ -16,8 +16,10 @@ import com.ncee.service.impl.UsersService;
 import com.opensymphony.xwork2.ActionSupport;
 
 @Namespace("/")
-@Results({ @Result(name = "success", location = "/WEB-INF/management/manageindex.jsp"),
-		@Result(name = "error", location = "/WEB-INF/assistancepages/Error.jsp") })
+@Results({
+	@Result(name="success",location="/WEB-INF/management/manageindex.jsp"),
+	@Result(name="error",location="/WEB-INF/assistancepages/error.jsp")
+})
 @Scope(value = "prototype")
 public class LoginAction extends ActionSupport {
 	private static final long serialVersionUID = -2860468326563825851L;
@@ -25,11 +27,11 @@ public class LoginAction extends ActionSupport {
 	@Autowired
 	private IUsersService userService;
 
-	@Action(value="/login")
+	@Action(value="login")
 	public String login() {
 		//Users user = this.userService.findUser(loginName, password);
 		logger.info(this.username + this.password);
-		return ERROR;
+		return SUCCESS;
 	}
 
 	private String username;
