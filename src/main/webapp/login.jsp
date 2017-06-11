@@ -36,13 +36,13 @@
 		    <div class="loginbox">
 			        <ul>
 					    <li>
-						    <input name="username" type="text" class="loginuser" value="ps" onclick="JavaScript:this.value=''"/>
+						    <input id="username" name="username" type="text" class="loginuser" value="ps" onclick="JavaScript:this.value=''"/>
 					    </li>
 					    <li>
-					    	<input name="password" type="password" class="loginpwd" value="lotus" onclick="JavaScript:this.value=''"/>
+					    	<input id="password" name="password" type="password" class="loginpwd" value="lotus" onclick="JavaScript:this.value=''"/>
 					    </li>
 					    <li>
-					    	<input name="login" type="submit" class="loginbtn" value="登录" /> <!-- onclick="javascript:window.location='manage/manageindex.jsp'"  -->
+					    	<input name="login" type="submit" class="loginbtn" value="Login"  /> <!-- onclick="javascript:window.location='manage/manageindex.jsp'"  -->
 					    	<label>
 					    		<input name="" type="checkbox" value="" checked="checked" />记住密码
 					    	</label>
