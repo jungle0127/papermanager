@@ -30,7 +30,9 @@
 		<property name="password" value="${mysql.password}"></property>
 	</bean>
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
-		p:dataSource-ref="mysqlDatasource" />
+		p:dataSource-ref="mysqlDatasource" >
+		<property name="configLocation" value="classpath:mybatis.cfg.xml"></property>
+	</bean>
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
 		p:dataSource-ref="mysqlDatasource" />
