@@ -8,11 +8,9 @@ import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Service;
 
 import com.ncee.dao.model.Users;
 import com.ncee.service.IUsersService;
-import com.ncee.service.impl.UsersService;
 import com.opensymphony.xwork2.ActionSupport;
 
 @Namespace("/")
@@ -30,10 +28,13 @@ public class LoginAction extends ActionSupport {
 	@Action(value="login")
 	public String login() {
 		Users user = this.userService.findUser(username, password);
-		logger.info("Username:{},Password:{},roleId:{}",user.getUsername(),user.getPassword(),user.getId());
-		logger.info(this.username + this.password);
+		if(null != user){
+			logger.info("Username:{},Password:{},roleId:{}",user.getUsername(),user.getPassword(),user.getId());
+			logger.info(this.username + this.password);
+			return SUCCESS;
+		}
 		logger.info("***********************log4j Test******************************");
-		return SUCCESS;
+		return ERROR;
 	}
 
 	private String username;
