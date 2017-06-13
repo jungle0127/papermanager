@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setBundle basename="i18n/facade/login"/>
+<fmt:setLocale value="zh_CN"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>NCEE登录系统</title>
+<title><fmt:message key="sys.page.title"/></title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/cloud.js" type="text/javascript"></script>
@@ -23,11 +26,11 @@
       <div id="cloud2" class="cloud"></div>
     </div>  
     <div class="logintop">    
-	    <span>欢迎登录后台管理界面平台</span>    
+	    <span><fmt:message key="sys.welcome.title"/></span>    
 	    <ul>
-		    <li><a href="#">回首页</a></li>
-		    <li><a href="#">帮助</a></li>
-		    <li><a href="#">关于</a></li>
+		    <li><a href="#"><fmt:message key="menu.back.index"/></a></li>
+		    <li><a href="#"><fmt:message key="menu.help"/></a></li>
+		    <li><a href="#"><fmt:message key="menu.about"/></a></li>
 	    </ul>    
 	</div>
 	<form action="login" method="post">
@@ -42,18 +45,22 @@
 					    	<input id="password" name="password" type="password" class="loginpwd" value="lotus" onclick="JavaScript:this.value=''"/>
 					    </li>
 					    <li>
-					    	<input name="login" type="submit" class="loginbtn" value="Login"  /> <!-- onclick="javascript:window.location='manage/manageindex.jsp'"  -->
+					    	<input name="login" type="submit" class="loginbtn" value='<fmt:message key="login.panel.login"></fmt:message>'  />
+					    	<!-- onclick="javascript:window.location='manage/manageindex.jsp'"  -->
 					    	<label>
-					    		<input name="" type="checkbox" value="" checked="checked" />记住密码
+					    		<input name="" type="checkbox" value="" checked="checked" />
+								<fmt:message key="login.panel.remember"/>
 					    	</label>
 					    	<label>
-					    		<a href="#">忘记密码？</a>
+					    		<a href="#">
+					    			<fmt:message key="login.panel.forget"/>
+								</a>
 					    	</label>
 					    </li>
 		    		</ul>
 	    	</div>
 	 	</div>
 	</form>
-	<div class="loginbm">版权所有  2017</div>
+	<div class="loginbm"><fmt:message key="license.info"/></div>
 </body>
 </html>
