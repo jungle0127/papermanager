@@ -11,22 +11,31 @@
 		<spring.version>4.3.8.RELEASE</spring.version>
 		<struts.version>2.5.10.1</struts.version>
 		<log4j.version>2.7</log4j.version>
+		<unitils.version>3.4.6</unitils.version>
 	</properties>
 
 	<dependencies>
+		<!-- Unit Test -->
+		<!-- 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- 
+		
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
 		</dependency>
 		 -->
+		 <dependency>
+		 	<groupId>org.unitils</groupId>
+		 	<artifactId>unitils-test</artifactId>
+		 	<version>${unitils.version}</version>
+		 	<scope>test</scope>
+		 </dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
