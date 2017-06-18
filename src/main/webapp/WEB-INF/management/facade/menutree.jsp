@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <fmt:setBundle basename="i18n/management/facade/menutree" />
-<fmt:setLocale value="zh_CN" />
+<!--  <fmt:setLocale value="zh_CN" />  -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -36,28 +37,60 @@ $(function(){
 	</div>
 
 	<dl class="leftmenu">
-
 		<dd>
 			<div class="title">
 				<span><img src="../images/leftico01.png" /></span>
 				<fmt:message key="menu.tree.branch.papermanage"></fmt:message>
 			</div>
 			<ul class="menuson">
-				<li class="active"><cite></cite> 
-					<a	href="../menutree/addquestion.do" target="rightFrame">添加考题</a> 
+				<li  class="active">
+					<cite></cite>
+					<s:a href="../menutree/addpaper" target="rightFrame">
+						<fmt:message key="menu.tree.leaf.addpaper"></fmt:message>
+					</s:a>
 				</li>
-				<li><cite></cite> <a href="publish/addprovince.jsp"
-					target="rightFrame">添加省份</a> <i></i></li>
-				<li><cite></cite><a href="view/papersearch.jsp"
-					target="rightFrame">问题列表</a><i></i></li>
-				<li><cite></cite><a href="knowledge/mapquestionknowledge.jsp"
-					target="rightFrame">添加知识点</a><i></i></li>
-				<li><cite></cite><a href="imglist.html" target="rightFrame">图片列表</a><i></i></li>
-				<li><cite></cite><a href="imglist1.html" target="rightFrame">自定义</a><i></i></li>
-				<li><cite></cite><a href="tools.html" target="rightFrame">常用工具</a><i></i></li>
-				<li><cite></cite><a href="filelist.html" target="rightFrame">信息管理</a><i></i></li>
-				<li><cite></cite><a href="tab.html" target="rightFrame">Tab页</a><i></i></li>
-				<li><cite></cite><a href="error.html" target="rightFrame">404页面</a><i></i></li>
+				<li>
+					<cite></cite>
+					<s:a href="../menutree/paperlist" target="rightFrame">
+						<fmt:message key="menu.tree.leaf.paperlist"></fmt:message> 
+					</s:a>
+				</li>
+				<li>
+					<cite></cite> 
+					<s:a href="../menutree/addquestion.do" target="rightFrame" >
+						<fmt:message key="menu.tree.leaf.addquestion"></fmt:message> 
+					</s:a>
+				</li>
+				<li>
+					<cite></cite>
+					<s:a href="../menutree/questionlist" target="rightFrame">
+						<fmt:message key="menu.tree.leaf.questionlist"></fmt:message>
+					</s:a>
+				</li>
+				<li>
+					<cite></cite>					
+					<s:a href="../menutree/addprovince.do" target="rightFrame"> 
+						<fmt:message key="menu.tree.leaf.addprovince"></fmt:message> 
+					</s:a> 
+				</li>
+				<li>
+					<cite></cite>
+					<s:a href="../menutree/provincelist" target="rightFrame">
+						<fmt:message key="menu.tree.leaf.provincelist"></fmt:message>
+					</s:a>
+				</li>
+				<li>
+					<cite></cite>
+					<s:a href="../menutree/addknowledge" target="rightFrame">
+						<fmt:message key="menu.tree.leaf.addknowledge"></fmt:message>
+					</s:a>
+				</li>
+				<li>
+					<cite></cite>
+					<s:a href="../menutree/knowledgelist" target="rightFrame">
+						<fmt:message key="menu.tree.leaf.knowledgelist"></fmt:message>
+					</s:a>
+				</li>
 			</ul>
 		</dd>
 
