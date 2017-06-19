@@ -17,6 +17,14 @@ apply plugin: 'war'
 
 sourceCompatibility = 1.8
 
+sourceSets {
+    main {
+        resources {            
+            srcDir 'src/main/java' //deploy all not java files to classes directory
+        }
+    }
+}
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
