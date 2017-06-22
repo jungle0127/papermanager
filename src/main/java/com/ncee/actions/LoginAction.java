@@ -3,7 +3,6 @@ package com.ncee.actions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import com.ncee.dao.model.Users;
 import com.ncee.service.IUsersService;
 import com.opensymphony.xwork2.ActionSupport;
 
-@Namespace("/")
+//@Namespace("/")
 @Results({
 	@Result(name="success",location="/WEB-INF/management/manageindex.jsp"),
 	@Result(name="error",location="/WEB-INF/assistancepages/error.jsp")
@@ -33,7 +32,6 @@ public class LoginAction extends ActionSupport {
 			logger.info(this.username + this.password);
 			return SUCCESS;
 		}
-		logger.info("***********************log4j Test******************************");
 		return ERROR;
 	}
 
