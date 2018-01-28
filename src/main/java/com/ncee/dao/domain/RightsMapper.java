@@ -32,7 +32,7 @@ public interface RightsMapper {
         "from rights",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.RightsMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     Rights selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Rights record);

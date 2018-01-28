@@ -30,7 +30,7 @@ public interface ProvinceMapper {
         "from province",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.ProvinceMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     Province selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Province record);

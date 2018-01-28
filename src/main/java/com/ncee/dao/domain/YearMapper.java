@@ -30,7 +30,7 @@ public interface YearMapper {
         "from year",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.YearMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     Year selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Year record);

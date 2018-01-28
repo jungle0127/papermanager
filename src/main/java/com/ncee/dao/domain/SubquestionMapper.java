@@ -32,7 +32,7 @@ public interface SubquestionMapper {
         "from subquestion",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.SubquestionMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     Subquestion selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Subquestion record);

@@ -30,7 +30,7 @@ public interface QuestionHasCheckTypeMapper {
         "from question_has_check_type",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.QuestionHasCheckTypeMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     QuestionHasCheckType selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(QuestionHasCheckType record);

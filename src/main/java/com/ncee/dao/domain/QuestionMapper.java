@@ -36,7 +36,7 @@ public interface QuestionMapper {
         "from question",
         "where question_id = #{questionId,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.QuestionMapper.ResultMapWithBLOBs")
+    @ResultMap("ResultMapWithBLOBs")
     QuestionWithBLOBs selectByPrimaryKey(Long questionId);
 
     int updateByPrimaryKeySelective(QuestionWithBLOBs record);

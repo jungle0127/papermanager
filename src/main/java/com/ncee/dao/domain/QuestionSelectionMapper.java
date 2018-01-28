@@ -32,7 +32,7 @@ public interface QuestionSelectionMapper {
         "from question_selection",
         "where question_selection_id = #{questionSelectionId,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.QuestionSelectionMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     QuestionSelection selectByPrimaryKey(Long questionSelectionId);
 
     int updateByPrimaryKeySelective(QuestionSelection record);

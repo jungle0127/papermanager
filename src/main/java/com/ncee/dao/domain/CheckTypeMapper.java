@@ -30,7 +30,7 @@ public interface CheckTypeMapper {
         "from check_type",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.CheckTypeMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     CheckType selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(CheckType record);

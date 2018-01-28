@@ -34,7 +34,7 @@ public interface KnowledgeInfoMapper {
         "from knowledge_info",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.KnowledgeInfoMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     KnowledgeInfo selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(KnowledgeInfo record);

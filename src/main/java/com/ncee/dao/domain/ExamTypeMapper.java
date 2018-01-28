@@ -30,7 +30,7 @@ public interface ExamTypeMapper {
         "from exam_type",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.ExamTypeMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     ExamType selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(ExamType record);

@@ -30,7 +30,7 @@ public interface QuestionHasKnowledgeMapper {
         "from question_has_knowledge",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.QuestionHasKnowledgeMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     QuestionHasKnowledge selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(QuestionHasKnowledge record);

@@ -30,7 +30,7 @@ public interface UserRoleMapper {
         "from user_role",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.UserRoleMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     UserRole selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(UserRole record);

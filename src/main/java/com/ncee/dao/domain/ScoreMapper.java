@@ -30,7 +30,7 @@ public interface ScoreMapper {
         "from score",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.ScoreMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     Score selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Score record);

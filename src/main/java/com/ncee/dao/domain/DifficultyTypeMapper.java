@@ -30,7 +30,7 @@ public interface DifficultyTypeMapper {
         "from difficulty_type",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.DifficultyTypeMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     DifficultyType selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(DifficultyType record);

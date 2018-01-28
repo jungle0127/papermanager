@@ -37,7 +37,7 @@ public interface QuestionMetadataMapper {
         "from question_metadata",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.QuestionMetadataMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     QuestionMetadata selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(QuestionMetadata record);

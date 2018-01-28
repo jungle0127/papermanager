@@ -30,7 +30,7 @@ public interface QuestionTypeMapper {
         "from question_type",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.QuestionTypeMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     QuestionType selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(QuestionType record);

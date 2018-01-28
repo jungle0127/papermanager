@@ -30,7 +30,7 @@ public interface CourseMapper {
         "from course",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.CourseMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     Course selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Course record);

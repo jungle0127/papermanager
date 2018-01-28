@@ -30,7 +30,7 @@ public interface QuestionImageMapper {
         "from question_image",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.QuestionImageMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     QuestionImage selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(QuestionImage record);

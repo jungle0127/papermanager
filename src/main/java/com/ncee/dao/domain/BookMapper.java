@@ -30,7 +30,7 @@ public interface BookMapper {
         "from book",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.BookMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     Book selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Book record);

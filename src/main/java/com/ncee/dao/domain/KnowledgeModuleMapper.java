@@ -32,7 +32,7 @@ public interface KnowledgeModuleMapper {
         "from knowledge_module",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.KnowledgeModuleMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     KnowledgeModule selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(KnowledgeModule record);

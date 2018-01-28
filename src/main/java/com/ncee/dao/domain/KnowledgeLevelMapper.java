@@ -30,7 +30,7 @@ public interface KnowledgeLevelMapper {
         "from knowledge_level",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.KnowledgeLevelMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     KnowledgeLevel selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(KnowledgeLevel record);

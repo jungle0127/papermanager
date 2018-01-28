@@ -30,7 +30,7 @@ public interface ConstructTypeMapper {
         "from construct_type",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("com.ncee.dao.domain.ConstructTypeMapper.BaseResultMap")
+    @ResultMap("BaseResultMap")
     ConstructType selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(ConstructType record);
