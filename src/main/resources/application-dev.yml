@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  contextPath: /ncee
+  
+spring:
+  datasource:
+    name: nceedatasource
+    url: jdbc:mysql://127.0.0.1:3306/ncee
+    username: root
+    password: lotus
+ 
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+ 
