@@ -1,13 +1,15 @@
 package com.ncee.dao.domain;
 
 import com.ncee.dao.model.Users;
-import com.ncee.dao.model.UsersExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.type.JdbcType;
 
 public interface UsersMapper {
     @Delete({
@@ -26,21 +28,52 @@ public interface UsersMapper {
     })
     int insert(Users record);
 
-    int insertSelective(Users record);
-
-    List<Users> selectByExample(UsersExample example);
-
     @Select({
         "select",
         "id, username, password, roleid, active",
         "from users",
         "where id = #{id,jdbcType=BIGINT}"
     })
-    @ResultMap("BaseResultMap")
+    @Results({
+        @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
+        @Result(column="username", property="username", jdbcType=JdbcType.VARCHAR),
+        @Result(column="password", property="password", jdbcType=JdbcType.VARCHAR),
+        @Result(column="roleid", property="roleid", jdbcType=JdbcType.BIGINT),
+        @Result(column="active", property="active", jdbcType=JdbcType.INTEGER)
+    })
     Users selectByPrimaryKey(Long id);
 
-    int updateByPrimaryKeySelective(Users record);
-
+    @Select({
+        "select",
+        "id, username, password, roleid, active",
+        "from users",
+        "order by id desc"
+    })
+    @Results({
+        @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
+        @Result(column="username", property="username", jdbcType=JdbcType.VARCHAR),
+        @Result(column="password", property="password", jdbcType=JdbcType.VARCHAR),
+        @Result(column="roleid", property="roleid", jdbcType=JdbcType.BIGINT),
+        @Result(column="active", property="active", jdbcType=JdbcType.INTEGER)
+    })
+    List<Users> selectAll();
+    
+    @Select({
+    	"select",
+        "id, username, password, roleid, active",
+        "from users",
+        "where username = #{username,jdbcType=VARCHAR}",
+        "AND password = #{password, jdbcType=VARCHAR}"
+    })
+    @Results({
+    	@Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
+        @Result(column="username", property="username", jdbcType=JdbcType.VARCHAR),
+        @Result(column="password", property="password", jdbcType=JdbcType.VARCHAR),
+        @Result(column="roleid", property="roleid", jdbcType=JdbcType.BIGINT),
+        @Result(column="active", property="active", jdbcType=JdbcType.INTEGER)
+    })
+    Users selectByLogin(Users pojo);
+    
     @Update({
         "update users",
         "set username = #{username,jdbcType=VARCHAR},",
